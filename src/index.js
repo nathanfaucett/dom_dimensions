@@ -2,8 +2,37 @@ var getCurrentStyle = require("get_current_style"),
     isElement = require("is_element");
 
 
-var domDimensions = exports;
+module.exports = domDimensions;
 
+
+function domDimensions(node) {
+    var dimensions = new Dimensions(),
+        clientRect;
+
+    if (isElement(node)) {
+        clientRect = node.getBoundingClientRect();
+
+        dimensions.top = clientRect.top;
+        dimensions.right = clientRect.left + node.offsetWidth;
+        dimensions.bottom = clientRect.top + node.offsetHeight;
+        dimensions.left = clientRect.left;
+        dimensions.width = dimensions.right - dimensions.left;
+        dimensions.height = dimensions.bottom - dimensions.top;
+
+        return dimensions;
+    } else {
+        return dimensions;
+    }
+}
+
+function Dimensions() {
+    this.top = 0;
+    this.right = 0;
+    this.bottom = 0;
+    this.left = 0;
+    this.width = 0;
+    this.height = 0;
+}
 
 domDimensions.top = function(node) {
     if (isElement(node)) {

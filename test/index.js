@@ -22,6 +22,20 @@ function createNode(fn) {
     }
 }
 
+tape("domDimensions(node) should return dimensions of node relative to viewport", function(assert) {
+    createNode(function(node) {
+        assert.deepEqual(domDimensions(node), {
+            bottom: 115,
+            height: 110,
+            left: 5,
+            right: 115,
+            top: 5,
+            width: 110
+        });
+        assert.end();
+    });
+});
+
 tape("domDimensions #top(node) should return top of node relative to viewport", function(assert) {
     createNode(function(node) {
         assert.equal(domDimensions.top(node), 5);
