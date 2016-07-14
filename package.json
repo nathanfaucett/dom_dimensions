@@ -1,5 +1,5 @@
 {
-  "name": "dom_dimensions",
+  "name": "@nathanfaucett/dom_dimensions",
   "version": "0.0.1",
   "description": "DOM dimensions for the browser and node.js",
   "repository": {
@@ -19,14 +19,14 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-jsbeautifier": "^0.2.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jsbeautifier": "^0.2.13",
     "tape": "^4.2.0",
     "zuul": "^3.3.0"
   },
   "dependencies": {
-    "get_current_style": "git://github.com/nathanfaucett/get_current_style.git",
-    "is_element": "git://github.com/nathanfaucett/is_element.git"
+    "@nathanfaucett/get_current_style": "^0.0.1",
+    "@nathanfaucett/is_element": "^0.0.1"
   }
 }

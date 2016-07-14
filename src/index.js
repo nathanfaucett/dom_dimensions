@@ -1,5 +1,5 @@
-var getCurrentStyle = require("get_current_style"),
-    isElement = require("is_element");
+var getCurrentStyle = require("@nathanfaucett/get_current_style"),
+    isElement = require("@nathanfaucett/is_element");
 
 
 module.exports = domDimensions;
